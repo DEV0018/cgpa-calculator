@@ -16,3 +16,7 @@ A simple CGPA Calculator built using HTML, CSS, and JavaScript.
 
 ## Author
 Devaraj
+
+## Project Preview
+
+![Screenshot](Screenshot2026-05-23173501.png)
