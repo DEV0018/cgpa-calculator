@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CGPA Calculator</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right,#4facfe,#00f2fe);
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+    }
+
+    .container{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      width:350px;
+      text-align:center;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    }
+
+    h1{
+      margin-bottom:20px;
+    }
+
+    input{
+      width:90%;
+      padding:10px;
+      margin:10px 0;
+      border:1px solid #ccc;
+      border-radius:8px;
+    }
+
+    button{
+      padding:10px 20px;
+      border:none;
+      background:#007bff;
+      color:white;
+      border-radius:8px;
+      cursor:pointer;
+      font-size:16px;
+    }
+
+    button:hover{
+      background:#0056b3;
+    }
+
+    #result{
+      margin-top:20px;
+      font-size:20px;
+      font-weight:bold;
+      color:green;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>CGPA Calculator</h1>
+
+    <input type="number" id="sem1" placeholder="Semester 1 GPA">
+    <input type="number" id="sem2" placeholder="Semester 2 GPA">
+    <input type="number" id="sem3" placeholder="Semester 3 GPA">
+
+    <button onclick="calculateCGPA()">Calculate CGPA</button>
+
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function calculateCGPA(){
+
+      let s1 = parseFloat(document.getElementById('sem1').value);
+      let s2 = parseFloat(document.getElementById('sem2').value);
+      let s3 = parseFloat(document.getElementById('sem3').value);
+
+      let cgpa = (s1 + s2 + s3) / 3;
+
+      document.getElementById('result').innerHTML =
+      "Your CGPA is: " + cgpa.toFixed(2);
+    }
+  </script>
+
+</body>
+</html>
